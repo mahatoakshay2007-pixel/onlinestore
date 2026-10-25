@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Account | Thread Reborn</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h2>Thread Reborn</h2>
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="categories.html">Categories</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+<a href="cart.html" class="cart-icon">
+<i class="fa-solid fa-cart-shopping"></i>
+<span id="cartCount">0</span>
+</a>
+
+</nav>
+
+</header>
+
+<section class="account-page fade-up">
+
+<div class="account-card">
+
+<i class="fa-solid fa-circle-user account-icon"></i>
+
+<h1>My Account</h1>
+
+<h2 id="accountName">Loading...</h2>
+
+<p id="accountEmail">Loading...</p>
+
+<div class="account-buttons">
+
+<a href="products.html" class="shop-btn">
+Continue Shopping
+</a>
+
+<button class="shop-btn logout-btn" onclick="logoutUser()">
+Logout
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

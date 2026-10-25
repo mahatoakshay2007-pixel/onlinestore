@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details | Thread Reborn</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- SAME SHARED HEADER -->
+<div id="header"></div>
+
+
+<main class="product-details-page">
+
+    <div class="product-details-container">
+
+        <!-- PRODUCT IMAGES -->
+        <div class="product-gallery">
+
+            <div class="product-thumbnails">
+
+                <img id="thumb1"
+                     onclick="changeProductImage(this.src)"
+                     alt="Product view 1">
+
+                <img id="thumb2"
+                     onclick="changeProductImage(this.src)"
+                     alt="Product view 2">
+
+                <img id="thumb3"
+                     onclick="changeProductImage(this.src)"
+                     alt="Product view 3">
+
+                <img id="thumb4"
+                     onclick="changeProductImage(this.src)"
+                     alt="Product view 4">
+
+            </div>
+
+            <div class="main-product-image">
+
+                <img id="mainProductImage"
+                     src=""
+                     alt="Product">
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT INFORMATION -->
+        <div class="product-info">
+
+            <p class="product-category">
+                THREAD REBORN
+            </p>
+
+            <h1 id="productName">
+                Product Name
+            </h1>
+
+            <div class="product-rating">
+                ★★★★★
+                <span>Eco-Friendly Product</span>
+            </div>
+
+            <h2 id="productPrice">
+                ₹0
+            </h2>
+
+            <p id="productDescription"
+               class="product-description">
+            </p>
+
+            <div class="sustainable-info">
+
+                <p>
+                    <i class="fa-solid fa-recycle"></i>
+                    Made from recycled/upcycled materials
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-leaf"></i>
+                    Sustainable & eco-friendly
+                </p>
+
+            </div>
+
+
+            <!-- QUANTITY -->
+
+            <div class="quantity-section">
+
+                <span>Quantity:</span>
+
+                <div class="quantity-box">
+
+                    <button onclick="changeQuantity(-1)">
+                        −
+                    </button>
+
+                    <span id="quantity">1</span>
+
+                    <button onclick="changeQuantity(1)">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="detailAddCart"
+                class="detail-cart-btn"
+                onclick="addCurrentProductToCart()">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Add to Cart
+
+            </button>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<script src="script.js"></script>
+<script src="header.js"></script>
+
+<script>
+
+/* ===============================
+   PRODUCT INFORMATION
+================================ */
+
+const productData = {
+
+    "acoustic-wall-panels": {
+
+        name: "Acoustic Wall Panels",
+
+        price: 899,
+
+        description:
+        "Eco-friendly acoustic wall panels made from recycled textile waste. Designed to help absorb sound while giving discarded fabric a useful new life.",
+
+        images: [
+            "images/acoustic-panel.jpg",
+            "images/acoustic-panel2.jpg",
+            "images/acoustic-panel3.jpg",
+            "images/acoustic-panel4.jpg"
+        ]
+    },
+
+
+    "pet-beds": {
+
+        name: "Pet Beds & Pet Caves",
+
+        price: 1299 ,
+
+        description:
+        "Soft and comfortable pet beds and cozy pet caves made using upcycled textile materials, designed to give pets a comfortable and sustainable resting space.",
+
+        images: [
+            "images/pet-bed.jpg",
+            "images/pet-bed2.jpg",
+            "images/pet-bed3.jpg",
+            "images/pet-bed4.jpg"
+        ]
+    },
+
+
+    "laptop-bag": {
+
+        name: "Laptop Bags",
+
+        price: 799,
+
+        description:
+        "Durable and stylish laptop bags created from recycled and upcycled textile materials to protect your laptop while reducing textile waste.",
+
+        images: [
+            "images/laptop-bag.jpg",
+            "images/laptop-bag2.jpg",
+            "images/laptop-bag3.jpg",
+            "images/laptop-bag4.jpg"
+        ]
+    },
+
+
+    "tote-bag": {
+
+        name: "Tote Bags",
+
+        price: 499,
+
+        description:
+        "Reusable tote bags made from upcycled textile materials. A practical and sustainable alternative for everyday shopping and carrying essentials.",
+
+        images: [
+            "images/tote-bag.jpg",
+            "images/tote-bag2.jpg",
+            "images/tote-bag3.jpg",
+            "images/tote-bag4.jpg"
+        ]
+    },
+
+
+    "pouch": {
+
+        name: "Small-Sized Pouches",
+
+        price: 99,
+
+        description:
+        "Compact multipurpose pouches created from leftover textile fabric, perfect for carrying small everyday essentials while reducing fabric waste.",
+
+        images: [
+            "images/pouch.jpg",
+            "images/pouch2.jpg",
+            "images/pouch3.jpg",
+            "images/pouch4.jpg"
+        ]
+    },
+
+
+    "scrunchies": {
+
+        name: "Scrunchies",
+
+        price: 49,
+
+        description:
+        "Handmade sustainable scrunchies created from leftover fabric scraps, transforming textile waste into stylish everyday accessories.",
+
+        images: [
+            "images/scrunchies.jpg",
+            "images/scrunchies2.jpg",
+            "images/scrunchies3.jpg",
+            "images/scrunchies4.jpg"
+        ]
+    }
+
+};
+
+
+/* GET PRODUCT FROM URL */
+
+const params =
+new URLSearchParams(window.location.search);
+
+const productID =
+params.get("product");
+
+const currentProduct =
+productData[productID];
+
+
+/* DISPLAY PRODUCT */
+
+if (currentProduct) {
+
+    document.getElementById("productName")
+    .textContent = currentProduct.name;
+
+    document.getElementById("productPrice")
+    .textContent = "₹" + currentProduct.price;
+
+    document.getElementById("productDescription")
+    .textContent = currentProduct.description;
+
+
+    document.getElementById("mainProductImage").src =
+    currentProduct.images[0];
+
+
+    for (let i = 0; i < 4; i++) {
+
+        document.getElementById(
+            "thumb" + (i + 1)
+        ).src = currentProduct.images[i];
+
+    }
+
+}
+
+
+/* CHANGE LARGE IMAGE */
+
+function changeProductImage(image) {
+
+    document.getElementById(
+        "mainProductImage"
+    ).src = image;
+
+}
+
+
+/* QUANTITY */
+
+let productQuantity = 1;
+
+function changeQuantity(amount) {
+
+    productQuantity += amount;
+
+    if (productQuantity < 1) {
+        productQuantity = 1;
+    }
+
+    document.getElementById(
+        "quantity"
+    ).textContent = productQuantity;
+
+}
+
+
+/* ADD PRODUCT TO CART */
+
+function addCurrentProductToCart() {
+
+    if (!currentProduct) {
+        return;
+    }
+
+    for (
+        let i = 0;
+        i < productQuantity;
+        i++
+    ) {
+
+        addToCart(
+            currentProduct.name,
+            currentProduct.price
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

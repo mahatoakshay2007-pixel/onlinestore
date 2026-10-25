@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thread Reborn</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body class="home-page">
+
+<div id="header"></div>
+
+<section class="hero fade-up">
+
+<div class="hero-content">
+
+<h1>Everything You Need</h1>
+
+<h2>Explore Sustainable Shopping</h2>
+
+<p>
+Discover eco-friendly products made from recycled materials.
+Shop smart. Save the planet.
+</p>
+
+<a href="products.html" class="shop-btn">Shop Now</a>
+
+</div>
+
+
+
+</section>
+
+<!-- Featured Categories -->
+
+<!-- Featured Categories -->
+
+<section class="categories fade-up">
+
+    <h2>Shop by Category</h2>
+
+    <div class="category-container">
+
+        <div class="category-card">
+            <img src="images/acoustic-panel.jpg" alt="Acoustic Wall Panels">
+
+            <h3>Acoustic Wall Panels</h3>
+
+            <p>
+                Eco-friendly sound-absorbing panels made
+                from recycled textile waste.
+            </p>
+
+            <a href="categories.html">
+                Explore
+            </a>
+        </div>
+
+
+        <div class="category-card">
+            <img src="images/pet-bed.jpg" alt="Pet Beds and Pet Caves">
+
+            <h3>Pet Beds & Pet Caves</h3>
+
+            <p>
+                Comfortable pet beds and cozy pet caves
+                made from upcycled textiles.
+            </p>
+
+            <a href="categories.html">
+                Explore
+            </a>
+        </div>
+
+
+        <div class="category-card">
+            <img src="images/laptop-bag.jpg" alt="Laptop Bags">
+
+            <h3>Laptop Bags</h3>
+
+            <p>
+                Durable laptop bags created from
+                recycled and upcycled textile materials.
+            </p>
+
+            <a href="categories.html">
+                Explore
+            </a>
+        </div>
+
+
+        <div class="category-card">
+            <img src="images/tote-bag.jpg" alt="Tote Bags">
+
+            <h3>Tote Bags</h3>
+
+            <p>
+                Stylish reusable tote bags made
+                from recycled textile waste.
+            </p>
+
+            <a href="categories.html">
+                Explore
+            </a>
+        </div>
+
+
+        <div class="category-card">
+            <img src="images/pouch.jpg" alt="Small-Sized Pouches">
+
+            <h3>Small-Sized Pouches</h3>
+
+            <p>
+                Compact multipurpose pouches made
+                from leftover textile fabric.
+            </p>
+
+            <a href="categories.html">
+                Explore
+            </a>
+        </div>
+
+
+        <div class="category-card">
+            <img src="images/scrunchies.jpg" alt="Scrunchies">
+
+            <h3>Scrunchies</h3>
+
+            <p>
+                Sustainable handmade scrunchies created
+                from leftover fabric scraps.
+            </p>
+
+            <a href="categories.html">
+                Explore
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Trending Products -->
+<!-- Trending Products -->
+
+<section class="products fade-up">
+
+<h2>Trending Products</h2>
+
+<div class="product-container">
+
+<!-- Acoustic Wall Panels -->
+
+<div class="product-card" data-category="home">
+
+<span class="sale-badge">NEW</span>
+
+<button class="wishlist-btn" onclick="toggleWishlist(this)">
+<i class="fa-regular fa-heart"></i>
+</button>
+<img src="images/acoustic-panel.jpg"
+     alt="Acoustic Wall Panels"
+     onclick="window.location.href='product-details.html?product=acoustic-wall-panels'"
+     style="cursor: pointer;">
+
+<h3>Acoustic Wall Panels</h3>
+
+<div class="rating">★★★★★</div>
+
+<p>
+Eco-friendly sound-absorbing panels made from recycled
+textile waste for quieter and sustainable spaces.
+</p>
+
+<h4>₹899</h4>
+
+<button class="cart-btn"
+onclick="addToCart('Acoustic Wall Panels',499)">
+Add to Cart
+</button>
+
+</div>
+
+
+<!-- Pet Beds & Pet Caves -->
+
+<div class="product-card" data-category="pets">
+
+<span class="sale-badge">NEW</span>
+
+<button class="wishlist-btn" onclick="toggleWishlist(this)">
+<i class="fa-regular fa-heart"></i>
+</button>
+
+<img src="images/pet-bed.jpg"
+     alt="Pet Beds & Pet Caves"
+     onclick="window.location.href='product-details.html?product=pet-beds'"
+     style="cursor: pointer;">
+<h3>Pet Beds & Pet Caves</h3>
+
+<div class="rating">★★★★★</div>
+
+<p>
+Soft and durable pet beds and cozy pet caves made
+from upcycled textile waste.
+</p>
+
+<h4>₹1,299</h4>
+
+<button class="cart-btn"
+onclick="addToCart('Pet Beds & Pet Caves',199)">
+Add to Cart
+</button>
+
+</div>
+
+
+<!-- Laptop Bags -->
+
+<div class="product-card" data-category="bags">
+
+<span class="sale-badge">NEW</span>
+
+<button class="wishlist-btn" onclick="toggleWishlist(this)">
+<i class="fa-regular fa-heart"></i>
+</button>
+
+<img src="images/laptop-bag.jpg"
+     alt="Laptop Bags"
+     onclick="window.location.href='product-details.html?product=laptop-bag'"
+     style="cursor: pointer;">
+
+<h3>Laptop Bags</h3>
+
+<div class="rating">★★★★★</div>
+
+<p>
+Stylish and protective laptop bags crafted from
+recycled textile waste.
+</p>
+
+<h4>₹799</h4>
+
+<button class="cart-btn"
+onclick="addToCart('Laptop Bag',799)">
+Add to Cart
+</button>
+
+</div>
+
+
+<!-- Tote Bags -->
+
+<div class="product-card" data-category="bags">
+
+<span class="sale-badge">HOT</span>
+
+<button class="wishlist-btn" onclick="toggleWishlist(this)">
+<i class="fa-regular fa-heart"></i>
+</button>
+<img src="images/tote-bag.jpg"
+     alt="Tote Bages"
+     onclick="window.location.href='product-details.html?product=tote-bag'"
+     style="cursor: pointer;">
+<h3>Tote Bags</h3>
+
+<div class="rating">★★★★★</div>
+
+<p>
+Reusable everyday tote bags made from upcycled
+textile waste for sustainable living.
+</p>
+
+<h4>₹499</h4>
+
+<button class="cart-btn"
+onclick="addToCart('Tote Bag',599)">
+Add to Cart
+</button>
+
+</div>
+
+
+<!-- Small-Sized Pouches -->
+
+<div class="product-card" data-category="bags">
+
+<span class="sale-badge">NEW</span>
+
+<button class="wishlist-btn" onclick="toggleWishlist(this)">
+<i class="fa-regular fa-heart"></i>
+</button>
+
+<img src="images/pouch.jpg"
+     alt="Small Sized Pouches"
+     onclick="window.location.href='product-details.html?product=pouch'"
+     style="cursor: pointer;">
+
+<h3>Small-Sized Pouches</h3>
+
+<div class="rating">★★★★★</div>
+
+<p>
+Compact multipurpose pouches made from leftover
+textile fabric.
+</p>
+
+<h4>₹99</h4>
+
+<button class="cart-btn"
+onclick="addToCart('Small-Sized Pouch',399)">
+Add to Cart
+</button>
+
+</div>
+
+
+<!-- Scrunchies -->
+
+<div class="product-card" data-category="accessories">
+
+<span class="sale-badge">NEW</span>
+
+<button class="wishlist-btn" onclick="toggleWishlist(this)">
+<i class="fa-regular fa-heart"></i>
+</button>
+
+<img src="images/scrunchies.jpg"
+     alt="Scrunchies"
+     onclick="window.location.href='product-details.html?product=scrunchies'"
+     style="cursor: pointer;">
+
+<h3>Scrunchies</h3>
+
+<div class="rating">★★★★★</div>
+
+<p>
+Handmade scrunchies created from fabric scraps,
+turning textile waste into fashionable accessories.
+</p>
+
+<h4>₹49</h4>
+
+<button class="cart-btn"
+onclick="addToCart('Scrunchies',299)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</section>
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-box">
+
+<h2>Thread Reborn</h2>
+
+<p>
+Giving waste a second life through sustainable shopping.
+Our mission is to make eco-friendly products affordable and accessible.
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+
+<a href="products.html">Products</a>
+
+<a href="categories.html">Categories</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Contact</h3>
+
+<p>📍 Jamshedpur, India</p>
+
+<p>📞 +91 9470577288</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Follow Us</h3>
+
+<div class="social-icons">
+
+<a href="" target="_blank">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+</div>
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 Thread Reborn. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script>
+if (window.innerWidth <= 768) {
+    document.querySelector(".categories")?.remove();
+    document.querySelector(".products")?.remove();
+}
+</script>
+
+
+<script src="script.js"></script>
+
+<button id="topBtn" onclick="topFunction()">
+    ↑
+</button>
+
+<script src="header.js"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Products | Thread Reborn</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<section class="products fade-up">
+
+<h2>Our Products</h2>
+
+<div class="product-container">
+
+<div class="product-card"
+data-catagory="panels">
+<img src="images/acoustic-panel.jpg"
+     alt="Acoustic Wall Panels"
+     onclick="window.location.href='product-details.html?product=acoustic-wall-panels'"
+     style="cursor: pointer;">
+<h3>Acoustic wall panels</h3>
+<p>: Eco-friendly sound-absorbing panels made from recycled textile waste for quieter and more sustainable spaces.</p>
+<h4>₹899</h4>
+<button class="cart-btn" onclick="addToCart('Acoustic Wall Panel',899)">
+Add to Cart
+</button>
+</div>
+
+<div class="product-card"
+data-category="caves">
+<img src="images/pet-bed.jpg"
+     alt="Pet Beds & Pet Caves"
+     onclick="window.location.href='product-details.html?product=pet-beds'"
+     style="cursor: pointer;">
+<h3>Pet beds and pets caves</h3>
+<p> Soft and durable pet essentials made from upcycled textile waste for your pet's comfort.</p>
+<h4>₹1,299</h4>
+<button class="cart-btn" onclick="addToCart('Pet Bed & Cave',1299)">
+Add to Cart
+</button>
+</div>
+
+<div class="product-card"
+data-category="bags">
+<img src="images/laptop-bag.jpg"
+     alt="Laptop Bags"
+     onclick="window.location.href='product-details.html?product=laptop-bag'"
+     style="cursor: pointer;">
+<h3>Laptop bags</h3>
+<p> Stylish and protective laptop bags crafted from recycled textile waste.</p>
+<h4>₹799</h4>
+<button class="cart-btn" onclick="addToCart('Laptop Bag',799)">
+Add to Cart
+</button>
+</div>
+
+<div class="product-card"
+data-category="pouch">
+
+<img src="images/pouch.jpg"
+     alt="Small Sized Pouches"
+     onclick="window.location.href='product-details.html?product=pouch'"
+     style="cursor: pointer;">
+<h3>Small sized pouches</h3>
+<p>Compact multipurpose pouches made from leftover textile fabric.</p>
+<h4>₹99</h4>
+<button class="cart-btn" onclick="addToCart('Small Size Pouch',99)">
+Add to Cart
+</button>
+</div>
+
+<div class="product-card" data-category="scrunchies">
+
+
+<img src="images/scrunchies.jpg"
+     alt="Scrunchies"
+     onclick="window.location.href='product-details.html?product=scrunchies'"
+     style="cursor: pointer;">
+<h3>Scrunchies</h3>
+<p>Handmade scrunchies created from fabric scraps, turning textile waste into fashionable accessories.</p>
+<h4>₹49</h4>
+<button class="cart-btn" onclick="addToCart('Scrunchies',49)">
+Add to Cart
+</button>
+</div>
+
+<div class="product-card">
+<img src="images/tote-bag.jpg"
+     alt="Tote Bages"
+     onclick="window.location.href='product-details.html?product=tote-bag'"
+     style="cursor: pointer;">
+<h3>Tote bags</h3>
+<p>Reusable everyday bags made from upcycled textile waste to promote sustainable living.</p>
+<h4>₹499</h4>
+<button class="cart-btn" onclick="addToCart('Tote Bag',499)">
+Add to Cart
+</button>
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+<script src="header.js"></script>
+</body>
+</html>

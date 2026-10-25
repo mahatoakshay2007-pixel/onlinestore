@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | Thread Reborn</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<section class="checkout fade-up">
+
+<h1>Checkout</h1>
+
+<form onsubmit="return placeOrder()">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<textarea placeholder="Shipping Address" rows="5" required></textarea>
+
+<select required>
+<option value="">Select Payment Method</option>
+<option>Cash on Delivery</option>
+<option>UPI</option>
+<option>Credit / Debit Card</option>
+</select>
+
+<button type="submit" class="shop-btn">
+Place Order
+</button>
+
+</form>
+
+</section>
+
+<script src="script.js"></script>
+<script src="header.js"></script>
+</body>
+</html>
